@@ -3,9 +3,9 @@
 // TA : SA
 // CLASS : KKI
 // FILE : Assignment1.java
-// GITHUB REPO :
-// COLLABORATOR :
-// OUTSIDE SOURCES :
+// GITHUB REPO : https://github.com/brmntyprytm/Assigment1.git
+// COLLABORATOR : Andika Pramudya Wardana, Muhammad Fahmi Habibie
+// OUTSIDE SOURCES : https://www.geeksforgeeks.org/program-credit-card-number-validation/
 //
 // START OF THE PROGRAM!!!
 
@@ -45,18 +45,15 @@ public class Assignment1 {
         } while (!quit);
     }
     public static boolean isValid(long number) {
-        if (getSize(number) >= 13 &&
-            getSize(number) <= 16 &&
-            (prefixMatched(number, 4) ||
-             prefixMatched(number, 5) ||
-             prefixMatched(number, 37) ||
-             prefixMatched(number, 6)) &&
-            (sumOfDoubleEvenPlace(number) +
-             sumOfOddPlace(number)) % 10 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        int size = getSize(number);
+        boolean validPrefix = prefixMatched(number, 4) ||
+                              prefixMatched(number, 5) ||
+                              prefixMatched(number, 37) ||
+                              prefixMatched(number, 6);
+        boolean validSum = (sumOfDoubleEvenPlace(number) +
+                            sumOfOddPlace(number)) % 10 == 0;
+        boolean validSize = size >= 13 && size <= 16;
+        return validPrefix && validSum && validSize;
     }
 
     public static int sumOfDoubleEvenPlace(long number) {
