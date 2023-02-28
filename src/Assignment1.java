@@ -1,9 +1,11 @@
-// NAME        : Bramantyo Priyo Utomo
-// NPM         : 2206821563
-// TA          : SA
-// CLASS       : KKI
-// FILE        : Assignment1.java
-// GitHub Repo :
+// NAME : Bramantyo Priyo Utomo
+// NPM : 2206821563
+// TA : SA
+// CLASS : KKI
+// FILE : Assignment1.java
+// GITHUB REPO :
+// COLLABORATOR :
+// OUTSIDE SOURCES :
 //
 // START OF THE PROGRAM!!!
 
@@ -17,11 +19,11 @@ public class Assignment1 {
                  "as a long integer, QUIT to end:\n",
                  "Credit Card Validity " + "Checker",
                  JOptionPane.PLAIN_MESSAGE);
-            long input = Long.parseLong(in);
-            if (in.equalsIgnoreCase("QUIT")) {
+            if (in.equalsIgnoreCase("quit")) {
                 quit = true;
             } else {
                 try {
+                    long input = Long.parseLong(in);
                     if (isValid(input)) {
                         JOptionPane.showMessageDialog(null,
                         "The number " + input + " is valid.",
@@ -35,7 +37,7 @@ public class Assignment1 {
                     }
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(null,
-                    "\"" + input + "\"" + " input is not allowed.\n" +
+                    "\"" + in + "\"" + " input is not allowed.\n" +
                     "Try again.", "Credit Card Validity " + "Checker",
                     JOptionPane.ERROR_MESSAGE);
                 }
