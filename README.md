@@ -1,4 +1,4 @@
-# Assigment1
+# Assigment 1
 
 ## Name : Bramantyo Priyo Utomo
 ## NPM : 2206821563
